@@ -13,7 +13,7 @@ public class ProjectileMovement : NetworkBehaviour
         transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
         if(lifeTime < 0){
             // need  to remove from all instances
-            GameManager.instance.DespawnGameObjectServerRPC(gameObject);
+            FPSGameManager.Instance.DespawnGameObjectServerRPC(gameObject);
 
         }else{
             lifeTime -= Time.deltaTime;
